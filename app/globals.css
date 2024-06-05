@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb)); /* Set text color */
+  background: url('/body.jpg') center/cover; /* Set background image */
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #03eccd, #ff00d4);
+  background-size: 200% 200%;
+  animation: gradientAnimation 1s infinite;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
